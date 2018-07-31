@@ -210,6 +210,15 @@ CLocalMapParse::CLocalMapParse(CString FileName)
     return;
 }
 
+BOOL CLocalMapParse::GetConfigVersion(int & congfigversion)
+{
+    if (m_bInited < XML_NONE)
+        return FALSE;
+
+    ConfigVersion = this->ConfigVersion;
+    return TRUE;
+}
+
 void CLocalMapParse::CreatPolicyIDMap()
 {
     if (m_bInited < XML_NONE)
