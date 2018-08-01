@@ -1,0 +1,53 @@
+{
+    "Config": 
+    {
+        "version": 1,
+        "CfgItem": 
+        [
+            {
+                "id": 0,
+                "name": "广告拦截运营规则配置",
+                "guid": "{EC28E648-B0A5-43B1-9614-D220F0F5A798}",
+                "QQPCMgrSupport":
+                {
+                    "build_min": 19735,
+                    "build_max": 19835
+                },
+                "Download":
+                {
+                    "appid": 2,
+                    "path": "%appdata%adblock\\adconfig.dat"
+                },
+                "Cloud":
+                {
+                    "policy_id": 5056,
+                    "switch_id": 1,
+                    "url_id": 2,
+                    "md5_id": 3
+                }
+            },
+            {
+                "id": 1,
+                "name": "广告拦截白名单配置",
+                "guid": "{EB2DD9BD-B6E1-4B14-AC92-A5A58C5AFC5B}",
+                "QQPCMgrSupport":
+                {
+                    "build_min": 19735,
+                    "build_max": 19835
+                },
+                "Download":
+                {
+                    "appid": 3,
+                    "path": "%appdata%adblock\\CommonAdCfg.dat"
+                },
+                "Cloud":
+                {
+                    "policy_id": 5056,
+                    "switch_id": 100,
+                    "url_id": 101,
+                    "md5_id": 102
+                }
+            }
+        ]
+    }
+}

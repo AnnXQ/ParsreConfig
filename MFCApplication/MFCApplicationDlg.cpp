@@ -7,6 +7,7 @@
 #include "MFCApplicationDlg.h"
 #include "afxdialogex.h"
 #include "LocalMapParse.h"
+#include "CfgItemConfig.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -92,13 +93,22 @@ HCURSOR CMFCApplicationDlg::OnQueryDragIcon()
 
 void CMFCApplicationDlg::OnBnClickedOk()
 {
+    CCfgItemConfig temp;
+    if (!temp.Load())
+        return;
+    CString str;
+    std::vector<UINT> idGroup;
+    temp.GetIDGroup(5056, idGroup);
+
+    str.Format(_T("%d %d"), idGroup[0], idGroup[1]);
+    MessageBox(str);
     // TODO: 在此添加控件通知处理程序代码
     //正常情况
-    theApp.xmlMap = new CLocalMapParse(TEXT("LocalConfigMap.xml"));
+    /*theApp.xmlMap = new CLocalMapParse(TEXT("LocalConfigMap.xml"));
 
     CString str = theApp.xmlMap->to_CString();
 
-    MessageBox(str);
+    MessageBox(str);*/
 
     //打开文件失败
     /*theApp.xmlMap = new CLocalMapParse(TEXT("LocalConfigMap2.xml"));
